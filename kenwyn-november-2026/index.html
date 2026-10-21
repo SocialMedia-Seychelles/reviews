@@ -1,0 +1,123 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"></head><body><title>Kenwyn House · November 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500&display=swap">
+<style>
+/* Layout: sticky header with post jump-links; one band per post, its feed row then its Stories row, scrolling sideways */
+:root{--bg:#F3EEE6;--surface:#FFFFFF;--fg:#1E1E1E;--mute:#56607A;--line:#E2D9CA;--brand:#1F3352;--accent:#C8452C;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;--body:Barlow,-apple-system,"Segoe UI",sans-serif;--w:220px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#080D1C;--surface:#121A31;--fg:#EDF1FA;--mute:#98A3BE;--line:#232D48;--brand:#8FB0E8;--accent:#F08A6E;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#080D1C;--surface:#121A31;--fg:#EDF1FA;--mute:#98A3BE;--line:#232D48;--brand:#8FB0E8;--accent:#F08A6E;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.45 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 40px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-block:14px 10px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:end}
+.t{flex:1 1 260px;min-width:0}
+h1{font:700 28px/1 var(--display);letter-spacing:.01em;margin:0;text-wrap:balance}
+.sub{color:var(--mute);font-size:13px;margin-top:4px}
+nav{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+nav a,.ctl button{font:600 14px/1 var(--body);color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 11px;text-decoration:none;cursor:pointer}
+nav a:hover,.ctl button:hover{border-color:var(--brand)}
+.ctl{display:flex;gap:6px}.ctl button[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--surface)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+section{padding-block:22px 6px;border-bottom:1px solid var(--line);scroll-margin-top:90px}
+h2{font:700 22px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;margin:0 0 10px;color:var(--brand)}
+.lab{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin:12px 0 6px}
+.row{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px;align-items:flex-start}
+.it{margin:0;flex:0 0 auto;width:var(--w);max-width:100%}
+.frame{position:relative;width:100%;max-width:100%;border-radius:12px;overflow:hidden;background:#000;box-shadow:0 1px 6px rgba(0,0,0,.15)}
+.frame video,.frame img{display:block;width:100%;height:100%;object-fit:contain}
+.play{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:pointer;display:grid;place-items:center;padding:0}
+.play span{width:58px;height:58px;border-radius:50%;background:rgba(31,51,82,.72);display:block;position:relative;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.play span::after{content:"";position:absolute;left:23px;top:18px;border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent}
+.frame.on .play span{opacity:0}.frame.on:hover .play span{opacity:1}
+.frame.on .play span::after{left:20px;top:19px;width:6px;height:20px;border:0;border-left:6px solid #fff;border-right:6px solid #fff;box-sizing:content-box;width:6px}
+.sep{flex:0 0 auto;align-self:stretch;display:flex;align-items:center;border-left:2px dashed var(--line);padding-left:10px}
+.sep span{writing-mode:vertical-rl;transform:rotate(180deg);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:10px}.sh h2{margin:0}
+.pall{font:600 13px/1 var(--body);color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 12px;cursor:pointer}
+.pall:hover{border-color:var(--brand)}
+.dr{font-weight:600;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--surface);background:var(--accent);border-radius:4px;padding:2px 5px}
+.snd{z-index:2;position:absolute;right:8px;bottom:8px;font:600 12px/1 var(--body);color:#fff;background:rgba(0,0,0,.55);border:0;border-radius:999px;padding:6px 10px;cursor:pointer}
+.snd[aria-pressed="true"]{background:var(--accent)}
+figcaption{font-size:13px;color:var(--mute);margin-top:6px;overflow-wrap:anywhere}
+.k{font-weight:600;color:var(--fg)}
+.cap{max-width:65ch;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin-bottom:6px}
+.cap summary{cursor:pointer;font-weight:500}.cap p{white-space:pre-wrap;margin:8px 0 2px}
+@media (max-width:480px){:root{--w:62vw}}
+</style>
+<header><div class="t"><h1>Kenwyn House · November 2026</h1><div class="sub">in-house review · tap a video to play it, Sound to hear it</div></div>
+<nav aria-label="Jump to post"><a href="#post1">1</a><a href="#post2">2</a><a href="#post3">3</a><a href="#post4">4</a><a href="#post5">5</a></nav>
+<div class="ctl" role="group" aria-label="Preview size"><button type="button" data-w="160px" aria-pressed="false">S</button><button type="button" data-w="220px" aria-pressed="true">M</button><button type="button" data-w="320px" aria-pressed="false">L</button></div></header>
+<main><section id="post1"><div class="sh"><h2>Post 1</h2><button class="pall" type="button">Play all</button></div><details class="cap"><summary>Caption</summary><p>165 years of letters, stamps and island stories 💌✉️
+
+In case you missed it: this October, Kenwyn House became a little post office of memories, celebrating the 165th anniversary of Seychelles Postal Services (1861–2026) 🇸🇨
+
+Swipe through village postmarks, the 1977 Flora &amp; Fauna stamps, first day covers, archive photos and post offices from Victoria to La Digue 📮 Then keep swiping for more moments from the exhibit 👀
+
+A heartfelt thank you to everyone who visited, and to Seychelles Postal Services for sharing their history with us 🤍
+
+Which old stamp or envelope is your favourite? Tell us below 👇
+
+#KenwynHouse #SeychellesPost #165Years #Philately #StampCollecting #SeychellesHistory #ArtInSeychelles #Seychelles #Throwback #WorldPostDay</p></details><div class="row"><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/1-1.jpg" alt="1-1" loading="lazy"></div><figcaption><span class="k">Slide</span> 1-1</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/1-2.jpg" alt="1-2" loading="lazy"></div><figcaption><span class="k">Slide</span> 1-2</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/1-3.jpg" alt="1-3" loading="lazy"></div><figcaption><span class="k">Slide</span> 1-3</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/1-4.jpg" alt="1-4" loading="lazy"></div><figcaption><span class="k">Slide</span> 1-4</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/1-5.jpg" alt="1-5" loading="lazy"></div><figcaption><span class="k">Slide</span> 1-5</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/1-6.jpg" alt="1-6" loading="lazy"></div><figcaption><span class="k">Slide</span> 1-6</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/1-7.jpg" alt="1-7" loading="lazy"></div><figcaption><span class="k">Slide</span> 1-7</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/1-8.jpg" alt="1-8" loading="lazy"></div><figcaption><span class="k">Slide</span> 1-8</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/1-9.jpg" alt="1-9" loading="lazy"></div><figcaption><span class="k">Slide</span> 1-9</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/1-10.jpg" alt="1-10" loading="lazy"></div><figcaption><span class="k">Slide</span> 1-10</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/1-11.jpg" alt="1-11" loading="lazy"></div><figcaption><span class="k">Slide</span> 1-11</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/1-12.jpg" alt="1-12" loading="lazy"></div><figcaption><span class="k">Slide</span> 1-12</figcaption></figure><div class="sep" aria-hidden="true"><span>Stories</span></div><figure class="it"><div class="frame" style="aspect-ratio:720/1280"><video src="media/story-1-1-grand-stories-written-in-stamps.mp4#t=0.6" muted playsinline preload="metadata"></video><button class="play" type="button" aria-label="Play Story 1-1 - Grand stories written in STAMPS"><span></span></button></div><figcaption><span class="k">Story</span> Story 1-1 - Grand stories written in STAMPS</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:720/1280"><video src="media/story-1-2-favourite-stamp-or-envelope-poll.mp4#t=0.6" muted playsinline preload="metadata"></video><button class="play" type="button" aria-label="Play Story 1-2 - Favourite stamp or envelope POLL"><span></span></button></div><figcaption><span class="k">Story</span> Story 1-2 - Favourite stamp or envelope POLL</figcaption></figure></div></section><section id="post2"><div class="sh"><h2>Post 2</h2><button class="pall" type="button">Play all</button></div><details class="cap"><summary>Caption</summary><p>Bonzour! 🌺 3 things you might not know about Kenwyn House 👇
+
+1️⃣ The art displayed here is open to all kinds of creators: art students, renowned local creators and emerging artists, all showcased for FREE 🎨
+2️⃣ It&#x27;s your community&#x27;s space: painting and photo competitions, mosaic workshops, pop-ups and countless more
+3️⃣ Made possible by Gran Kaz, keeping the doors open for local art 🤍
+
+Lakaz pou tou artis: a house for every artist. Bon Mwa Kreol! 🇸🇨
+
+Are you an artist? Send us a message to learn more 💌
+
+#KenwynHouse #BonMwaKreol #FestivalKreol #MwaKreol #SeychellesArt #ArtInSeychelles #LocalArtists #CommunityArt #Seychelles #GranKaz</p></details><div class="row"><figure class="it"><div class="frame" style="aspect-ratio:720/1280"><video src="media/2-lakaz-pou-tou-artis-reel-final.mp4#t=0.6" muted playsinline preload="metadata"></video><button class="play" type="button" aria-label="Play 2 - Lakaz pou tou artis REEL (final)"><span></span></button><button class="snd" type="button" aria-pressed="false" aria-label="Sound on">Sound</button></div><figcaption><span class="k">Reel</span> 2 - Lakaz pou tou artis REEL (final)</figcaption></figure><div class="sep" aria-hidden="true"><span>Stories</span></div><figure class="it"><div class="frame" style="aspect-ratio:720/1280"><video src="media/story-2-1-lakaz-pou-tou-artis-teaser.mp4#t=0.6" muted playsinline preload="metadata"></video><button class="play" type="button" aria-label="Play Story 2-1 - Lakaz pou tou artis teaser"><span></span></button></div><figcaption><span class="k">Story</span> Story 2-1 - Lakaz pou tou artis teaser</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:720/1280"><video src="media/story-2-2-which-one-are-you-poll.mp4#t=0.6" muted playsinline preload="metadata"></video><button class="play" type="button" aria-label="Play Story 2-2 - Which one are you POLL"><span></span></button></div><figcaption><span class="k">Story</span> Story 2-2 - Which one are you POLL</figcaption></figure></div></section><section id="post3"><div class="sh"><h2>Post 3</h2><button class="pall" type="button">Play all</button></div><details class="cap"><summary>Caption</summary><p>165 years of Seychelles Post, in one little reel 📮✉️
+
+Missed our pop-up? Take a little trip back in time with us 🇸🇨
+
+📍 1861: the first Post Office opens in Victoria
+📍 1890: our very first definitive stamps
+📍 1932: air mail arrives (but the first leg still went by boat!)
+📍 1976: &quot;Independence 1976&quot; printed on our stamps
+📍 1980s: outer-island stamps, spelled 3 different ways
+
+Thank you to Seychelles Postal Services for sharing 165 years of history with us, and to the Julian Luke Collection for these treasures 🤍
+
+Which era would you have loved to send a letter in? Tell us below 👇
+
+#KenwynHouse #SeychellesPost #165Years #SeychellesHistory #Philately #StampCollecting #Throwback #ArtInSeychelles #Seychelles #WorldPostDay</p></details><div class="row"><figure class="it"><div class="frame" style="aspect-ratio:720/1280"><video src="media/3-post-office-165th-recap-reel.mp4#t=0.6" muted playsinline preload="metadata"></video><button class="play" type="button" aria-label="Play 3 - Post Office 165th recap REEL"><span></span></button><button class="snd" type="button" aria-pressed="false" aria-label="Sound on">Sound</button></div><figcaption><span class="k">Reel</span> 3 - Post Office 165th recap REEL</figcaption></figure><div class="sep" aria-hidden="true"><span>Stories</span></div><figure class="it"><div class="frame" style="aspect-ratio:720/1280"><video src="media/story-3-1-165-years-in-6-seconds-timeline.mp4#t=0.6" muted playsinline preload="metadata"></video><button class="play" type="button" aria-label="Play Story 3-1 - 165 years in 6 seconds timeline"><span></span></button></div><figcaption><span class="k">Story</span> Story 3-1 - 165 years in 6 seconds timeline</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:720/1280"><video src="media/story-3-2-air-mail-quiz.mp4#t=0.6" muted playsinline preload="metadata"></video><button class="play" type="button" aria-label="Play Story 3-2 - Air mail QUIZ"><span></span></button></div><figcaption><span class="k">Story</span> Story 3-2 - Air mail QUIZ</figcaption></figure></div></section><section id="post4"><div class="sh"><h2>Post 4</h2><button class="pall" type="button">Play all</button></div><details class="cap"><summary>Caption</summary><p>For the days you forget you&#x27;re an artist 🎨✨
+
+7 little notes from our studio walls to yours. Read them, keep them, and come back whenever you need the reminder 🤍
+
+Which one spoke to you? Share your favourite quote to your Story and inspire someone today 💌
+
+Words by: @paintingsbymir · Fearless Fairy · [add the other creators&#x27; handles]
+
+#KenwynHouse #ArtQuotes #CreativeLife #KeepCreating #ArtistsOfInstagram #ArtInSeychelles #SeychellesArt #Seychelles #MakeArt #CreativeInspiration</p></details><div class="row"><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/4-1.jpg" alt="4-1" loading="lazy"></div><figcaption><span class="k">Slide</span> 4-1</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/4-2.jpg" alt="4-2" loading="lazy"></div><figcaption><span class="k">Slide</span> 4-2</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/4-3.jpg" alt="4-3" loading="lazy"></div><figcaption><span class="k">Slide</span> 4-3</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/4-4.jpg" alt="4-4" loading="lazy"></div><figcaption><span class="k">Slide</span> 4-4</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/4-5.jpg" alt="4-5" loading="lazy"></div><figcaption><span class="k">Slide</span> 4-5</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/4-6.jpg" alt="4-6" loading="lazy"></div><figcaption><span class="k">Slide</span> 4-6</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/4-7.jpg" alt="4-7" loading="lazy"></div><figcaption><span class="k">Slide</span> 4-7</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/4-8.jpg" alt="4-8" loading="lazy"></div><figcaption><span class="k">Slide</span> 4-8</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:1080/1350"><img src="media/4-9.jpg" alt="4-9" loading="lazy"></div><figcaption><span class="k">Slide</span> 4-9</figcaption></figure><div class="sep" aria-hidden="true"><span>Stories</span></div><figure class="it"><div class="frame" style="aspect-ratio:720/1280"><video src="media/story-4-1-need-a-little-nudge-teaser.mp4#t=0.6" muted playsinline preload="metadata"></video><button class="play" type="button" aria-label="Play Story 4-1 - Need a little nudge teaser"><span></span></button></div><figcaption><span class="k">Story</span> Story 4-1 - Need a little nudge teaser</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:720/1280"><video src="media/story-4-2-which-words-do-you-need-poll.mp4#t=0.6" muted playsinline preload="metadata"></video><button class="play" type="button" aria-label="Play Story 4-2 - Which words do you need POLL"><span></span></button></div><figcaption><span class="k">Story</span> Story 4-2 - Which words do you need POLL</figcaption></figure></div></section><section id="post5"><div class="sh"><h2>Post 5</h2><button class="pall" type="button">Play all</button></div><details class="cap"><summary>Caption</summary><p>Featured Artist of the Month: Michael Adams MBE 🎨🌴
+
+Painting the Seychelles since 1972, Michael is famous for his vivid silkscreen prints of island plants, Creole houses and the ocean, every layer full of colour and pattern 💙
+
+Born in Malaysia and trained at the Royal College of Art in London, he made Mahé his home, and he&#x27;s still creating today: collage journals full of travels and memories ✂️📖
+
+His studio and gallery are at Anse aux Poules Bleues, Mahé 📍
+
+Which piece is your favourite? Comment its number 👇 1, 2, 3 or 4
+
+[add Michael Adams&#x27; @handle]
+
+#KenwynHouse #FeaturedArtist #MichaelAdams #SeychellesArt #SeychellesArtist #Silkscreen #Printmaking #CollageArt #ArtInSeychelles #Seychelles</p></details><div class="row"><figure class="it"><div class="frame" style="aspect-ratio:720/1280"><video src="media/5-featured-artist-michael-adams-reel-final.mp4#t=0.6" muted playsinline preload="metadata"></video><button class="play" type="button" aria-label="Play 5 - Featured Artist Michael Adams REEL (final)"><span></span></button><button class="snd" type="button" aria-pressed="false" aria-label="Sound on">Sound</button></div><figcaption><span class="k">Reel</span> 5 - Featured Artist Michael Adams REEL (final)</figcaption></figure><div class="sep" aria-hidden="true"><span>Stories</span></div><figure class="it"><div class="frame" style="aspect-ratio:720/1280"><video src="media/story-5-1-what-inspires-him-teaser.mp4#t=0.6" muted playsinline preload="metadata"></video><button class="play" type="button" aria-label="Play Story 5-1 - What inspires him teaser"><span></span></button></div><figcaption><span class="k">Story</span> Story 5-1 - What inspires him teaser</figcaption></figure><figure class="it"><div class="frame" style="aspect-ratio:720/1280"><video src="media/story-5-2-look-closely-quiz.mp4#t=0.6" muted playsinline preload="metadata"></video><button class="play" type="button" aria-label="Play Story 5-2 - Look closely QUIZ"><span></span></button></div><figcaption><span class="k">Story</span> Story 5-2 - Look closely QUIZ</figcaption></figure></div></section></main>
+<script>
+const vids=[...document.querySelectorAll('video')];
+const fr=v=>v.parentNode;
+const start=v=>{v.loop=true;v.play().catch(()=>{});fr(v).classList.add('on')};
+const stop=v=>{v.pause();fr(v).classList.remove('on')};
+const sync=()=>document.querySelectorAll('.pall').forEach(b=>{b.textContent=[...b.closest('section').querySelectorAll('video')].some(v=>!v.paused)?'Pause all':'Play all'});
+vids.forEach(v=>{v.addEventListener('pause',()=>{fr(v).classList.remove('on');sync()});v.addEventListener('play',()=>{fr(v).classList.add('on');sync()})});
+document.querySelectorAll('.play').forEach(b=>b.onclick=()=>{const v=b.parentNode.querySelector('video');v.paused?start(v):stop(v)});
+document.querySelectorAll('.pall').forEach(b=>b.onclick=()=>{const vs=[...b.closest('section').querySelectorAll('video')];
+  vids.forEach(o=>{if(!vs.includes(o))stop(o)});const any=vs.some(v=>!v.paused);
+  if(any){vs.forEach(stop);b.textContent='Play all'}else{vs.forEach(v=>{v.currentTime=0;start(v)});b.textContent='Pause all'}});
+document.querySelectorAll('.snd').forEach(b=>b.onclick=()=>{const v=b.parentNode.querySelector('video'),on=v.muted;
+  vids.forEach(o=>o.muted=true);document.querySelectorAll('.snd').forEach(x=>x.setAttribute('aria-pressed','false'));
+  if(on){v.muted=false;v.currentTime=0;b.setAttribute('aria-pressed','true');start(v)}});
+document.querySelectorAll('[data-w]').forEach(b=>b.onclick=()=>{document.documentElement.style.setProperty('--w',b.dataset.w);
+  document.querySelectorAll('[data-w]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)))});
+</script>
+</body></html>
