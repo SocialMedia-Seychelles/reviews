@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Homemakers by P&amp;J Supplies | Your total home store, Seychelles</title>
+<meta name="description" content="Homemakers by P&amp;J Supplies: building materials, timber, tiles, paint, sanitary ware, appliances, furniture and everything for the home. Providence and Victoria, Mahé. A family business for over 30 years.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="assets/img/logo-icon.png">
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="hotspots" data-hotspots></div>
+
+<header class="top">
+  <a class="brand" href="#top" data-go="0" aria-label="Homemakers by P&amp;J Supplies, back to the start"><img src="assets/img/logo.png" alt="P&amp;J Supplies (Pty) Ltd Homemakers" width="326" height="57"></a>
+  <nav class="pill" aria-label="Main">
+    <button type="button" data-menu-open>Departments</button>
+    <span class="sep" aria-hidden="true"></span>
+    <a href="#stores">Our stores</a>
+    <span class="sep" aria-hidden="true"></span>
+    <a href="#story">Our story</a>
+  </nav>
+  <button class="menubtn" type="button" data-menu-open aria-controls="menu" aria-expanded="false">Menu</button>
+  <button class="listbtn" type="button" aria-controls="drawer" aria-expanded="false"><span>My list</span><b class="count" aria-live="polite">0</b></button>
+</header>
+
+<main id="main">
+  <!-- The journey: each screen-height of scrolling moves the camera to the next stage of the house -->
+  <section class="journey" id="top" aria-label="Build a house with Homemakers, stage by stage">
+    <div class="steps" data-steps></div>
+  </section>
+
+  <div class="hud" data-hud>
+    <div class="caption" data-caption aria-live="polite"></div>
+    <nav class="stagelist" aria-label="Stages of the house">
+      <p>What are you building?</p>
+      <ol data-stagelist></ol>
+    </nav>
+    <div class="rail" aria-hidden="true"><i data-rail></i></div>
+    <p class="cue" data-cue aria-hidden="true">Scroll to build</p>
+  </div>
+
+  <section class="after" id="stores" aria-labelledby="stores-h">
+    <div class="after-in">
+      <h2 id="stores-h">Two stores on Mahé</h2>
+      <div class="stores">
+        <article class="store">
+          <img src="assets/img/tool-aisle.webp" alt="Aisle of hand tools on display" loading="lazy" width="320" height="320">
+          <div>
+            <h3>Providence</h3>
+            <p class="status" data-status><span class="dot"></span><span data-status-text>Mon to Fri, 8am to 6pm</span></p>
+            <p>Rue St. Benoit, Providence Industrial Estate, on the Providence Highway. Our biggest store: building materials, timber, tiles, furniture and appliances.</p>
+            <div class="row">
+              <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=8FVP%2B7VH+Providence+Seychelles" target="_blank" rel="noopener">Directions</a>
+              <a class="btn line" href="tel:+2484373337">437 3337</a>
+              <a class="btn line" href="tel:+2484373744">437 3744</a>
+            </div>
+          </div>
+        </article>
+        <article class="store">
+          <img src="assets/img/kitchen-shelf.webp" alt="Kitchen shelves with plates and glassware" loading="lazy" width="783" height="800">
+          <div>
+            <h3>Victoria</h3>
+            <p class="status" data-status><span class="dot"></span><span data-status-text>Mon to Fri, 8am to 6pm</span></p>
+            <p>Palm Street, in town. Kitchenware, household supplies, home accessories and small appliances.</p>
+            <div class="row">
+              <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=9FJ3%2B23X+Victoria+Seychelles" target="_blank" rel="noopener">Directions</a>
+              <a class="btn line" href="tel:+2484324181">432 4181</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="story" id="story">
+        <p class="big" aria-hidden="true">30+</p>
+        <div>
+          <h2>Years of Seychellois homes</h2>
+          <p>P&amp;J Supplies started as a building materials supplier and grew, one department at a time, into Homemakers: the place you can buy the cement for your walls, the tiles for your floor and the sofa for your living room.</p>
+          <p>We still work the way we started. Real people on the shop floor, advice when you need it and honest prices on quality brands like Luminarc, Ronseal, Indesit and Alcolin.</p>
+        </div>
+      </div>
+    </div>
+    <footer class="foot">
+      <img src="assets/img/logo.png" alt="P&amp;J Supplies (Pty) Ltd Homemakers" width="326" height="57" loading="lazy">
+      <p>P&amp;J Supplies (Pty) Ltd, Rue St. Benoit, Providence Industrial Estate, P.O. Box 25, Victoria, Mahé, Seychelles</p>
+      <p><a href="tel:+2484373337">+248 437 3337</a> <a href="tel:+2484373744">+248 437 3744</a> <a href="mailto:pnjsupplies@seychelles.net">pnjsupplies@seychelles.net</a></p>
+      <p class="small">© 2026 P&amp;J Supplies (Pty) Ltd</p>
+    </footer>
+  </section>
+</main>
+
+<!-- Full menu -->
+<div class="menu" id="menu" hidden>
+  <div class="menu-in">
+    <div class="menu-head"><h2>Menu</h2><button type="button" class="x" data-menu-close aria-label="Close the menu">×</button></div>
+    <div class="menu-grid">
+      <div>
+        <h3>Departments</h3>
+        <ul class="deptlist" data-deptlist></ul>
+      </div>
+      <div class="menu-side">
+        <h3>Visit</h3>
+        <a href="#stores" data-menu-close>Our stores</a>
+        <a href="#story" data-menu-close>Our story</a>
+        <a href="tel:+2484373337">Call Providence, 437 3337</a>
+        <a href="tel:+2484324181">Call Victoria, 432 4181</a>
+        <p class="status" data-status><span class="dot"></span><span data-status-text>Mon to Fri, 8am to 6pm</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Department sheet -->
+<aside class="sheet" id="sheet" aria-labelledby="sheet-h" hidden>
+  <div class="sheet-in" data-sheet></div>
+</aside>
+
+<div class="minilist" data-mini hidden><span data-mini-text>0 items on your list</span><button type="button" class="btn light" data-open-list>Send my list</button></div>
+
+<aside class="drawer" id="drawer" aria-label="Your list" hidden>
+  <div class="drawer-in">
+    <div class="drawer-head"><h2>Your list</h2><button type="button" class="x" aria-label="Close your list">×</button></div>
+    <p class="empty" data-empty>Nothing on your list yet. Open any department and tap what you need.</p>
+    <ul class="items" data-items></ul>
+    <form class="send" data-send>
+      <label>Your name<input name="name" autocomplete="name" required></label>
+      <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+      <label>Anything else we should know?<textarea name="note" rows="3" placeholder="Lengths, colours, sizes, delivery to…"></textarea></label>
+      <label>Send to<select name="branch"><option>Providence</option><option>Victoria</option></select></label>
+      <button class="btn" type="submit">Email my list to the store</button>
+      <p class="small">Opens your email app with the list filled in. The store replies with prices and stock.</p>
+    </form>
+  </div>
+</aside>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script type="module" src="assets/site.js"></script>
+</body>
+</html>
