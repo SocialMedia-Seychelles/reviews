@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Departments | Homemakers by P&amp;J Supplies</title>
+<meta name="description" content="Browse a Homemakers department, add what you need to your list and send it to the store for prices and stock.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/dept.css">
+<link rel="icon" href="assets/img/logo-icon.png">
+</head>
+<body class="dept-page">
+<a class="skip" href="#grid">Skip to the products</a>
+
+<header class="top">
+  <a class="brand" href="index.html" aria-label="Homemakers by P&amp;J Supplies, home"><img src="assets/img/logo.png" alt="P&amp;J Supplies (Pty) Ltd Homemakers" width="326" height="57"></a>
+  <nav class="pill" aria-label="Main">
+    <a href="index.html" data-house>The house</a>
+    <span class="sep" aria-hidden="true"></span>
+    <button type="button" data-menu-open>Departments</button>
+    <span class="sep" aria-hidden="true"></span>
+    <a href="index.html#stores">Our stores</a>
+  </nav>
+  <button class="menubtn" type="button" data-menu-open aria-controls="menu" aria-expanded="false">Menu</button>
+  <button class="listbtn" type="button" aria-controls="drawer" aria-expanded="false"><span>My list</span><b class="count" aria-live="polite">0</b></button>
+</header>
+
+<main id="main">
+  <section class="dhero" aria-labelledby="dept-h">
+    <div class="dhero-in">
+      <div class="dhero-txt">
+        <a class="back" href="index.html" data-house><span aria-hidden="true">←</span> <span data-back-text>Back to the house</span></a>
+        <p class="step" data-step></p>
+        <h1 id="dept-h" data-title>Departments</h1>
+        <p class="dline" data-line></p>
+        <p class="dmeta" data-meta></p>
+      </div>
+      <div class="dhero-pic" aria-hidden="true"><img data-pic src="assets/img/d-building.webp" alt=""></div>
+    </div>
+    <nav class="sibs" aria-label="Departments at this stage" data-sibs></nav>
+  </section>
+
+  <div class="bar" data-bar>
+    <div class="bar-in">
+      <div class="subs" role="group" aria-label="Filter by type" data-subs></div>
+      <label class="find"><span class="sr">Search this department</span><input type="search" data-find placeholder="Search" autocomplete="off"></label>
+    </div>
+  </div>
+
+  <section class="grid-wrap" aria-label="Products">
+    <p class="shown" data-shown aria-live="polite"></p>
+    <ul class="grid" id="grid" data-grid></ul>
+    <div class="none" data-none hidden>
+      <h2>Nothing matches that search</h2>
+      <p>Try another word, or add it to your list below and the store will check for you.</p>
+    </div>
+  </section>
+
+  <section class="asks" aria-labelledby="asks-h">
+    <div class="asks-in">
+      <div>
+        <h2 id="asks-h" data-asks-title>Not on the website yet?</h2>
+        <p data-asks-line>The stores carry far more than we can photograph. Tap what you need and the team will check stock and send you a price.</p>
+      </div>
+      <div>
+        <div class="chips" data-popular></div>
+        <form class="other" data-other>
+          <label for="other-in">Something else</label>
+          <div class="other-row"><input id="other-in" name="other" placeholder="Describe it: size, colour, brand…" autocomplete="off" required><button class="btn" type="submit">Add to list</button></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <a class="next" data-next href="index.html"><span class="next-k">Next department</span><span class="next-t" data-next-t></span><span class="next-a" aria-hidden="true">→</span></a>
+
+  <footer class="foot">
+    <img src="assets/img/logo.png" alt="P&amp;J Supplies (Pty) Ltd Homemakers" width="326" height="57" loading="lazy">
+    <p><b>Providence</b>, Rue St. Benoit, Providence Industrial Estate. <a href="tel:+2484374502">437 4502</a></p>
+    <p><b>Victoria</b>, Palm Street. <a href="tel:+2484324181">432 4181</a></p>
+    <p class="status" data-status><span class="dot"></span><span data-status-text>Mon to Fri, 8am to 6pm</span></p>
+    <p class="small">Product photos and names from homemakers.sc. © 2026 P&amp;J Supplies (Pty) Ltd</p>
+  </footer>
+</main>
+
+<!-- Product quick view -->
+<dialog class="qv" data-qv aria-labelledby="qv-h">
+  <div class="qv-in" data-qv-in></div>
+</dialog>
+
+<!-- Full menu -->
+<div class="menu" id="menu" hidden>
+  <div class="menu-in">
+    <div class="menu-head"><h2>Menu</h2><button type="button" class="x" data-menu-close aria-label="Close the menu">×</button></div>
+    <div class="menu-grid">
+      <div>
+        <h3>Departments</h3>
+        <ul class="deptlist" data-deptlist></ul>
+      </div>
+      <div class="menu-side">
+        <h3>Visit</h3>
+        <a href="index.html">The house</a>
+        <a href="index.html#stores">Our stores</a>
+        <a href="tel:+2484374502">Call Providence, 437 4502</a>
+        <a href="tel:+2484324181">Call Victoria, 432 4181</a>
+        <p class="status" data-status><span class="dot"></span><span data-status-text>Mon to Fri, 8am to 6pm</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="minilist" data-mini hidden><span data-mini-text>0 items on your list</span><button type="button" class="btn light" data-open-list>Send my list</button></div>
+
+<aside class="drawer" id="drawer" aria-label="Your list" hidden>
+  <div class="drawer-in">
+    <div class="drawer-head"><h2>Your list</h2><button type="button" class="x" aria-label="Close your list">×</button></div>
+    <p class="empty" data-empty>Nothing on your list yet. Tap “Add to list” on anything you need.</p>
+    <ul class="items" data-items></ul>
+    <form class="send" data-send>
+      <label>Your name<input name="name" autocomplete="name" required></label>
+      <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+      <label>Anything else we should know?<textarea name="note" rows="3" placeholder="Lengths, colours, sizes, delivery to…"></textarea></label>
+      <label>Send to<select name="branch"><option>Providence</option><option>Victoria</option></select></label>
+      <button class="btn" type="submit">Email my list to the store</button>
+      <p class="small">Opens your email app with the list filled in. The store replies with prices and stock.</p>
+    </form>
+  </div>
+</aside>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script type="module" src="assets/dept.js"></script>
+</body>
+</html>

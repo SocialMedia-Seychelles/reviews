@@ -135,8 +135,8 @@ button { font-family: var(--ff); }
 .menu h3 { font-size: 15px; font-weight: 700; color: var(--gold-l); margin-bottom: 18px; }
 .deptlist { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 28px 30px; }
 .deptlist span { display: block; font-size: 14px; font-weight: 600; opacity: .6; margin-bottom: 6px; }
-.deptlist button { display: block; padding: 3px 0; border: 0; background: none; color: #fff; font: 750 21px/1.25 var(--ff); font-variation-settings: "wdth" 108; text-align: left; cursor: pointer; }
-.deptlist button:hover { color: var(--gold-l); }
+.deptlist button, .deptlist a { display: block; text-decoration: none; padding: 3px 0; border: 0; background: none; color: #fff; font: 750 21px/1.25 var(--ff); font-variation-settings: "wdth" 108; text-align: left; cursor: pointer; }
+.deptlist button:hover, .deptlist a:hover { color: var(--gold-l); }
 .menu-side { display: grid; gap: 12px; align-content: start; }
 .menu-side a { font-size: 21px; font-weight: 700; text-decoration: none; }
 .menu-side a:hover { color: var(--gold-l); }

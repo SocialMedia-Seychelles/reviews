@@ -4,7 +4,7 @@
 import * as THREE from "three";
 
 const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
-const MAIL = "pnjsupplies@seychelles.net";
+const MAIL = "sales@pnjsupplies.sc";
 const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const rec = /[?&]rec\b/.test(location.search); // recording mode: camera follows the scroll exactly
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
@@ -14,37 +14,37 @@ const easeIO = (t) => (t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
 /* ---------- Content ---------- */
 const STAGES = [
   { n: 1, title: "Foundations", line: "Start with what holds it all up.", pic: "builder",
-    groups: [{ name: "Building materials", img: "d-building", at: [-3.4, 0.45, 2.7], items: ["Cement (50 kg bags)", "Steel bars", "Welded mesh", "Sand and aggregate", "Blocks"] }] },
+    groups: [{ name: "Building materials", slug: "building", img: "d-building", at: [-3.4, 0.45, 2.7], items: ["Cement (50 kg bags)", "Steel bars", "Welded mesh", "Sand and aggregate", "Blocks"] }] },
   { n: 2, title: "Frame & roof", line: "Timber in the sizes builders ask for, and a roof over it.", pic: "timber-stack",
-    groups: [{ name: "Timber", img: "d-timber", at: [0, 4.45, 1.2], items: ["Timber 2×2", "Timber 4×2", "Timber 6×2", "Timber 9×2", "Roofing timber", "Decking boards", "Fencing panels", "Sheds"] }] },
+    groups: [{ name: "Timber", slug: "timber", img: "d-timber", at: [0, 4.45, 1.2], items: ["Timber 2×2", "Timber 4×2", "Timber 6×2", "Timber 9×2", "Roofing timber", "Decking boards", "Fencing panels", "Sheds"] }] },
   { n: 3, title: "Walls & floors", line: "Tiles to walk on and paint to live with.", pic: "paint-room",
     groups: [
-      { name: "Floor & wall tiles", img: "d-tiles", at: [-1.8, 0.45, 1.7], items: ["Matt floor tiles", "Shiny floor tiles", "Granular tiles", "Slip-resistant outdoor tiles", "Textured wall tiles", "Tile adhesive and grout"] },
-      { name: "Paint & varnish", img: "d-paint", at: [-3.7, 1.8, 1.0], items: ["Exterior paint", "Interior paint", "Wood varnish", "Fence and shed stain", "Brushes and rollers"] }] },
+      { name: "Floor & wall tiles", slug: "tiles", img: "d-tiles", at: [-1.8, 0.45, 1.7], items: ["Matt floor tiles", "Shiny floor tiles", "Granular tiles", "Slip-resistant outdoor tiles", "Textured wall tiles", "Tile adhesive and grout"] },
+      { name: "Paint & varnish", slug: "paint", img: "d-paint", at: [-3.7, 1.8, 1.0], items: ["Exterior paint", "Interior paint", "Wood varnish", "Fence and shed stain", "Brushes and rollers"] }] },
   { n: 4, title: "Bathroom & fittings", line: "Sanitary ware, plus the pipes and wires behind the walls.", pic: "bathroom",
     groups: [
-      { name: "Bathroom & sanitary ware", img: "d-bathroom", at: [3.1, 1.0, -2.5], items: ["Toilet", "Wash basin", "Bath", "Taps and mixers", "Bathroom accessories"] },
-      { name: "Plumbing & electrical", img: "d-electrical", at: [1.75, 1.9, -1.7], items: ["Plumbing fittings", "Breakers", "Sockets and switches", "Cable", "Light fittings", "Silicone sealant"] }] },
+      { name: "Bathroom & sanitary ware", slug: "bathroom", img: "d-bathroom", at: [3.1, 1.0, -2.5], items: ["Toilet", "Wash basin", "Bath", "Taps and mixers", "Bathroom accessories"] },
+      { name: "Plumbing & electrical", slug: "plumbing", img: "d-electrical", at: [1.75, 1.9, -1.7], items: ["Plumbing fittings", "Breakers", "Sockets and switches", "Cable", "Light fittings", "Silicone sealant"] }] },
   { n: 5, title: "Furnishing", line: "Rooms you want to come home to.", pic: "sofa-room",
     groups: [
-      { name: "Furniture", img: "d-furniture", at: [-2.3, 1.2, 2.5], items: ["Sofa", "Dining set", "Bedroom set", "Office furniture", "Outdoor furniture"] },
-      { name: "Mattresses & foam", img: "d-mattress", photo: true, at: [-2.3, 0.95, -1.9], items: ["Single mattress", "Double mattress", "Queen mattress", "Foam cut to size"] },
-      { name: "Home appliances", img: "d-appliances", at: [3.55, 2.3, 0.0], items: ["Washing machine", "Fridge", "Dishwasher", "Cooker hood", "Microwave"] }] },
+      { name: "Furniture", slug: "furniture", img: "d-furniture", at: [-2.3, 1.2, 2.5], items: ["Sofa", "Dining set", "Bedroom set", "Office furniture", "Outdoor furniture"] },
+      { name: "Mattresses & foam", slug: "mattresses", img: "d-mattress", photo: true, at: [-2.3, 0.95, -1.9], items: ["Single mattress", "Double mattress", "Queen mattress", "Foam cut to size"] },
+      { name: "Home appliances", slug: "appliances", img: "d-appliances", at: [3.55, 2.3, 0.0], items: ["Washing machine", "Fridge", "Dishwasher", "Cooker hood", "Microwave"] }] },
   { n: 6, title: "Kitchen & everyday", line: "Everything a busy house goes through in a week.", pic: "kitchen",
     groups: [
-      { name: "Kitchen & tableware", img: "d-kitchen", at: [3.6, 1.45, 1.7], items: ["Cookware set", "Knife block", "Dinner set", "Oven dishes", "Luminarc glassware"] },
-      { name: "Plastic ware", img: "d-plastic", at: [2.95, 0.85, 0.45], items: ["Storage containers", "Bins", "Water bottles", "Basins"] },
-      { name: "Household supplies", img: "d-household", at: [1.2, 0.9, -0.2], items: ["Mop and bucket", "Brooms", "Dustpan and brush", "Cleaning products"] }] },
+      { name: "Kitchen & tableware", slug: "kitchen", img: "d-kitchen", at: [3.6, 1.45, 1.7], items: ["Cookware set", "Knife block", "Dinner set", "Oven dishes", "Luminarc glassware"] },
+      { name: "Plastic ware", slug: "plastic", img: "d-plastic", at: [2.95, 0.85, 0.45], items: ["Storage containers", "Bins", "Water bottles", "Basins"] },
+      { name: "Household supplies", slug: "household", img: "d-household", at: [1.2, 0.9, -0.2], items: ["Mop and bucket", "Brooms", "Dustpan and brush", "Cleaning products"] }] },
   { n: 7, title: "Outside", line: "The garden, the deck and the tools that keep it all going.", pic: "garden",
     groups: [
-      { name: "Garden", img: "d-garden", at: [-4.9, 0.5, 4.7], items: ["Garden hose", "Watering can", "Spade and fork", "Rake", "Wheelbarrow"] },
-      { name: "Tools & power tools", img: "d-tools", at: [-2.6, 0.95, 6.0], items: ["Drill", "Jigsaw", "Hand tools set", "Drill bits and hole saws"] }] },
+      { name: "Garden", slug: "garden", img: "d-garden", at: [-4.9, 0.5, 4.7], items: ["Garden hose", "Watering can", "Spade and fork", "Rake", "Wheelbarrow"] },
+      { name: "Tools & power tools", slug: "tools", img: "d-tools", at: [-2.6, 0.95, 6.0], items: ["Drill", "Jigsaw", "Hand tools set", "Drill bits and hole saws"] }] },
 ];
 const END = 8; // scroll units (screen heights) in the journey
 
 /* ---------- Page chrome ---------- */
 $("[data-stagelist]").innerHTML = STAGES.map((s) => `<li><button type="button" data-go="${s.n}">${s.title}</button></li>`).join("");
-$("[data-deptlist]").innerHTML = STAGES.map((s) => `<li><span>${s.title}</span>${s.groups.map((g, i) => `<button type="button" data-dept="${s.n}:${i}">${g.name}</button>`).join("")}</li>`).join("");
+$("[data-deptlist]").innerHTML = STAGES.map((s) => `<li><span>${s.title}</span>${s.groups.map((g) => `<a href="department.html?d=${g.slug}">${g.name}</a>`).join("")}</li>`).join("");
 $("[data-hotspots]").innerHTML =
   STAGES.flatMap((s) => s.groups.map((g, i) => `<button type="button" class="hs" data-dept="${s.n}:${i}" data-hs="${s.n}" tabindex="-1"><i></i><span>${g.name}</span></button>`)).join("") +
   [["Living", -2.3, 1.5], ["Kitchen", 2.4, 1.5], ["Bath", 2.8, -1.8], ["Bedroom", -2.3, -1.8]].map(([t, x, z]) => `<span class="plan-label" data-plan="${x},${z}">${t}</span>`).join("");
@@ -78,7 +78,7 @@ function caption(i) {
     const s = STAGES[i - 1];
     c.innerHTML = `<img class="cap-pic" src="assets/img/${s.pic}.webp" alt="">
       <p class="step">Stage ${s.n} of 7</p><h2>${s.title}</h2><p class="lede">${s.line}</p>
-      <div class="cap-groups">${s.groups.map((g, k) => `<button type="button" class="btn light" data-dept="${s.n}:${k}">${g.name}</button>`).join("")}</div>`;
+      <div class="cap-groups">${s.groups.map((g) => `<a class="btn light" href="department.html?d=${g.slug}">${g.name}</a>`).join("")}</div>`;
   }
   c.classList.remove("in"); void c.offsetWidth; c.classList.add("in");
   $$("[data-stagelist] button").forEach((b) => b.toggleAttribute("aria-current", +b.dataset.go === i));
@@ -391,6 +391,13 @@ canvas.addEventListener("click", (e) => { const c = cardAt(e); if (c) openDept(c
 canvas.addEventListener("pointermove", (e) => { canvas.style.cursor = cardAt(e) ? "pointer" : ""; });
 
 /* ---------- Frame loop ---------- */
+const hm = location.hash.match(/^#stage-([1-7])$/);
+if (hm) {
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  const y = +hm[1] * innerHeight;
+  if (lenis) lenis.scrollTo(y, { immediate: true }); else window.scrollTo(0, y);
+  history.replaceState(null, "", location.pathname + location.search);
+}
 let P = scrollY / innerHeight;
 const hsEls = $$(".hs"), planEls = $$(".plan-label"), hsPos = hsEls.map((b) => { const [n, g] = b.dataset.dept.split(":").map(Number); return new THREE.Vector3(...STAGES[n - 1].groups[g].at); });
 const cardTilt = new THREE.Quaternion().setFromEuler(new THREE.Euler(0.05, -0.32, 0.03)), dummy = new THREE.Object3D(), cBlock = new THREE.Color(0xb9bec6), cPaint = new THREE.Color(0xf2f5f9);
@@ -529,22 +536,9 @@ const save = () => { try { localStorage.setItem("pj-list", JSON.stringify(list))
 const sheet = $("#sheet");
 let lastFocus = null;
 const chip = (i, label = i, cls = "chip") => `<button type="button" class="${cls}" data-item="${i}" aria-pressed="${list.some((x) => x.name === i)}">${label}</button>`;
-function openDept(n, g) {
-  const s = STAGES[n - 1], grp = s.groups[g];
-  if (sheet.hidden) lastFocus = document.activeElement;
-  $("[data-sheet]").innerHTML = `
-    <button type="button" class="x" data-sheet-close aria-label="Close ${grp.name}">×</button>
-    <div class="sheet-pic"><img src="assets/img/${s.pic}.webp" alt=""><span class="disc${grp.photo ? " ph" : ""}"><img src="assets/img/${grp.img}.webp" alt=""></span></div>
-    <p class="step">Stage ${s.n}, ${s.title}</p>
-    <h2 id="sheet-h">${grp.name}</h2>
-    <p>Tap what you need. It goes on your list, and you send the list to the store for prices and stock.</p>
-    <div class="chips">${grp.items.map((i) => chip(i)).join("")}${chip(`${grp.name}: something else (I'll describe it)`, "Something else", "chip ask")}</div>
-    ${s.groups.length > 1 ? `<div class="more"><p>Also at this stage</p>${s.groups.map((o, k) => (k === g ? "" : `<button type="button" class="btn line" data-dept="${n}:${k}">${o.name}</button>`)).join("")}</div>` : ""}
-    <button type="button" class="btn" data-open-list>See my list</button>`;
-  sheet.hidden = false; requestAnimationFrame(() => sheet.classList.add("on"));
-  $(".x", sheet).focus({ preventScroll: true });
-  if (Math.abs(P - n) > 0.3) go(n);
-}
+/* Each department now has its own catalogue page */
+const deptUrl = (n, g) => `department.html?d=${STAGES[n - 1].groups[g].slug}`;
+function openDept(n, g) { location.href = deptUrl(n, g); }
 function closeSheet() { sheet.classList.remove("on"); setTimeout(() => (sheet.hidden = true), 300); if (lastFocus) lastFocus.focus({ preventScroll: true }); }
 
 /* ---------- Menu ---------- */
@@ -618,3 +612,4 @@ function status() {
 }
 status(); setInterval(status, 60000);
 render();
+addEventListener("pageshow", () => { try { list = JSON.parse(localStorage.getItem("pj-list") || "[]"); } catch (e) {} render(); });
