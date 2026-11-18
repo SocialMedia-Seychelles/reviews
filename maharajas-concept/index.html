@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Maharajas | North Indian restaurant, Eden Island, Seychelles</title>
+<meta name="description" content="The Maharajas: North Indian cooking from the tandoor, by the marina at Eden Island, Seychelles. See the menu, book a table or order a takeaway.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1c1733">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }</script>
+</head>
+<body class="home">
+<a class="skip" href="#main">Skip to content</a>
+
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="hotspots" data-hotspots></div>
+
+<header class="top">
+  <a class="brand" href="#top" data-go="0" aria-label="The Maharajas, back to the start"><img class="logo" src="assets/img/logo.png" alt="The Maharajas" width="288" height="120"></a>
+  <nav class="pill" aria-label="Main">
+    <button type="button" data-menu-open aria-controls="menu" aria-expanded="false">Menu</button>
+    <button type="button" data-book aria-controls="book" aria-expanded="false">Book</button>
+    <a href="#visit">Find us</a>
+  </nav>
+  <button class="menubtn" type="button" data-menu-open aria-controls="menu" aria-expanded="false">Menu</button>
+  <button class="orderbtn" type="button" data-order-open aria-controls="order" aria-expanded="false"><span>My order</span><b class="count" aria-live="polite">0</b></button>
+</header>
+
+<main id="main">
+  <section class="journey" id="top" aria-label="Dinner at The Maharajas, course by course"></section>
+
+  <div class="hud" data-hud>
+    <div class="caption" data-caption aria-live="polite"></div>
+    <nav class="stagelist" aria-label="Courses">
+      <ol data-stagelist></ol>
+    </nav>
+    <div class="rail" aria-hidden="true"><i data-rail></i></div>
+    <p class="cue" data-cue aria-hidden="true">Scroll to set the table</p>
+  </div>
+
+  <section class="after" id="visit" aria-labelledby="visit-h">
+    <div class="after-in">
+      <div class="visit">
+        <div>
+          <h2 id="visit-h">Find us by the marina</h2>
+          <p class="lede">Commercial House 1, Eden Island. Park on the island and walk along the water: we're upstairs, looking out over the yachts to the Mahé mountains.</p>
+          <p class="status" data-status><span class="dot"></span><span data-status-text>Every day, 12 noon to 10.45 pm</span></p>
+          <dl class="facts">
+            <div><dt>Open</dt><dd>Every day, lunch and dinner<br>12 noon to 10.45 pm</dd></div>
+            <div><dt>Call</dt><dd><a href="tel:+2484346869">4 346 869</a><br><a href="tel:+2482811461">2 811 461</a></dd></div>
+            <div><dt>Write</dt><dd><a href="mailto:b.vijay@themaharajasseychelles.com">b.vijay@themaharajasseychelles.com</a></dd></div>
+          </dl>
+          <div class="row">
+            <button type="button" class="btn" data-book>Book a table</button>
+            <a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=The+Maharajas+Eden+Island+Seychelles" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+        <figure class="mapcard" aria-label="Map: The Maharajas on the marina at Eden Island, off the east coast of Mahé">
+          <svg viewBox="0 0 400 300" role="img" aria-hidden="true">
+            <path class="land" d="M0 0h400v58c-30 6-52 26-64 52-10 20-30 30-52 30-30 0-44 20-48 44-5 30-30 56-62 64-34 9-66 6-96 14-26 7-52 18-78 38z"/>
+            <path class="island" d="M228 186c18-20 52-26 80-16 24 9 38 30 34 52-4 24-30 40-60 40-36 0-64-16-66-40-1-14 3-26 12-36z"/>
+            <path class="marina" d="M262 206c12-8 30-8 40 2 8 8 6 22-6 28-14 7-32 4-38-6-5-8-3-18 4-24z"/>
+            <path class="cause" d="M206 170l26 22" />
+            <circle class="pin" cx="300" cy="212" r="8"/>
+            <text x="288" y="192" text-anchor="end">The Maharajas</text>
+            <text class="dim" x="40" y="40">Mahé</text>
+            <text class="dim" x="150" y="152">Victoria</text>
+            <text class="dim" x="236" y="264">Eden Island</text>
+          </svg>
+        </figure>
+      </div>
+
+      <div class="praise">
+        <p class="big">Lonely Planet's pick for the best Indian restaurant in Seychelles.</p>
+        <p>"The Maharajas" means the King of Kings. The kitchen cooks North India the way its old royal courts ate: slow curries, breads and kebabs from the clay oven, rice finished with saffron and rose water.</p>
+        <div class="row">
+          <a class="btn line" href="menu.html?c=tandoor">See the menu</a>
+          <button type="button" class="btn line" data-order-open>Order a takeaway</button>
+        </div>
+      </div>
+
+      <div class="events">
+        <h2>Private and corporate dinners</h2>
+        <p>Birthdays, team nights and company dinners, with special rates and a chef's set menu for groups. <button type="button" class="linkish" data-book>Ask us about a date</button></p>
+      </div>
+    </div>
+    <footer class="foot">
+      <p class="footlogo"><img class="logo" src="assets/img/logo-tag.png" alt="The Maharajas, authentic Indian cuisine" width="286" height="116" loading="lazy"></p>
+      <p>Commercial House 1, Eden Island, Mahé, Seychelles</p>
+      <p><a href="tel:+2484346869">+248 4 346 869</a> <a href="https://www.instagram.com/themaharajasseychelles/" target="_blank" rel="noopener">Instagram</a> <a href="https://www.facebook.com/themaharajasseychelles" target="_blank" rel="noopener">Facebook</a></p>
+      <p class="small">© 2026 The Maharajas</p>
+    </footer>
+  </section>
+</main>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script type="module" src="assets/site.js"></script>
+</body>
+</html>
