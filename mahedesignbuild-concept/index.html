@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mahé Design &amp; Build | Class One building contractor, Seychelles</title>
+<meta name="description" content="Mahé Design &amp; Build: Seychelles Class One building contractor since 2002. Design and build, turnkey or single stage, for resorts, private villas, commercial, industrial and community projects.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#E4E6E1">
+<link rel="icon" href="assets/img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }</script>
+</head>
+<body class="home">
+<a class="skip" href="#main">Skip to content</a>
+
+<canvas id="scene" aria-hidden="true"></canvas>
+
+<header class="top" data-chrome></header>
+
+<main id="main">
+  <section class="journey" id="top" aria-label="A building, from the site plan to handover">
+    <div class="steps" data-steps></div>
+  </section>
+
+  <div class="hud" data-hud>
+    <div class="caption" data-caption aria-live="polite"></div>
+    <aside class="tblock" aria-label="Drawing sheets">
+      <div class="tb-row tb-head">
+        <svg class="north" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="currentColor" stroke-width="1"/><path d="M20 4 L25 24 L20 20 L15 24 Z" fill="currentColor"/><text x="20" y="38" text-anchor="middle" font-size="7" fill="currentColor">N</text></svg>
+        <div><span class="tb-k">Project</span><span class="tb-v">Your next building</span></div>
+      </div>
+      <div class="tb-row"><div><span class="tb-k">Sheet</span><span class="tb-v" data-tb-sheet>01 of 06</span></div><div><span class="tb-k">Scale</span><span class="tb-v">1:200</span></div></div>
+      <div class="tb-row"><div><span class="tb-k">Title</span><span class="tb-v tb-title" data-tb-title>Survey &amp; site plan</span></div></div>
+      <ol class="tb-sheets" data-sheets></ol>
+      <div class="tb-row tb-foot"><span>Mahé Design &amp; Build Co. Ltd</span><span>Class One</span></div>
+    </aside>
+    <div class="rail" aria-hidden="true"><i data-rail></i></div>
+    <p class="cue" data-cue aria-hidden="true">Scroll to build</p>
+  </div>
+
+  <div class="after">
+    <section class="register" id="projects" aria-labelledby="projects-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="projects-h">Projects</h2>
+          <p>Resorts on Praslin, villas on the Mahé hills, a church, a hangar, a head office. A selection of the buildings we've handed over.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Show projects by sector" data-filters></div>
+        <div class="reg">
+          <ol class="reg-list" data-register></ol>
+          <figure class="reg-peek" aria-hidden="true"><img data-peek alt=""></figure>
+        </div>
+        <div class="now">
+          <svg viewBox="0 0 120 80" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1"><path d="M8 70h104M16 70V30h88v40M16 30l44-20 44 20"/><path d="M28 70V42h16v28M52 42h16v12H52zM76 42h16v12H76z" stroke-dasharray="3 2"/></g><path d="M8 74h104" stroke="#FF5B14" stroke-width="1"/></svg>
+          <span><b data-now-name></b><span data-now-note></span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="creds" id="about" aria-labelledby="about-h">
+      <div class="wrap creds-in">
+        <div class="stamp" aria-hidden="true"><span>Class One</span><span>Building contractor</span><span>Seychelles</span></div>
+        <div class="creds-text">
+          <h2 id="about-h">Building in Seychelles since 2002</h2>
+          <p>Mahé Design &amp; Build is a Class One contractor, the top grade of building licence in Seychelles. We take projects turnkey, from design to handover, or as a single stage when you already have a team.</p>
+          <p>We know the islands' regulations, sites and suppliers, and much of our work comes from clients who recommend us.</p>
+          <dl class="facts">
+            <div><dt>Licence</dt><dd>Class One</dd></div>
+            <div><dt>Founded</dt><dd>2002</dd></div>
+            <div><dt>Work</dt><dd>Design and build, turnkey or single stage</dd></div>
+          </dl>
+          <div class="names">
+            <h3>Clients include</h3>
+            <p>Seychelles Petroleum Company, Lemuria Resort, Val Mer Resort, Public Utilities Corporation, Pirogue Restaurant, the Ministry of Land Use and Habitat</p>
+            <h3>Architects we've built for</h3>
+            <p data-architects></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quotes" aria-labelledby="quotes-h">
+      <div class="wrap">
+        <h2 id="quotes-h">What our clients say</h2>
+        <div class="quote-list" data-quotes></div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-h">
+      <div class="wrap cta-in">
+        <h2 id="cta-h">Got land, plans or just an idea?</h2>
+        <p>Tell us what you want to build and where you are up to. Four quick questions, and it goes straight to our team.</p>
+        <a class="btn" href="start.html">Start a project</a>
+      </div>
+    </section>
+
+    <footer class="foot" id="contact" data-foot></footer>
+  </div>
+</main>
+
+<div class="menu" id="menu" hidden data-menu></div>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script type="module" src="assets/site.js"></script>
+</body>
+</html>

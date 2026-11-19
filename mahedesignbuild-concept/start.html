@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Start a project | Mahé Design &amp; Build</title>
+<meta name="description" content="Tell Mahé Design &amp; Build what you want to build, where, and where you are up to. Sent by email or WhatsApp.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#E4E6E1">
+<link rel="icon" href="assets/img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body class="page">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top solid" data-chrome></header>
+
+<main id="main" class="start">
+  <div class="wrap start-in">
+    <div class="start-main">
+      <h1>Start a project</h1>
+      <p class="start-lede">Four quick questions about your project, then your details. Nothing is sent until you press send.</p>
+      <div class="steps-bar" aria-hidden="true"><i data-bar></i></div>
+      <p class="step-n" data-step-n aria-live="polite"></p>
+      <form data-form novalidate>
+        <fieldset class="q" data-q="type">
+          <legend>What are you building?</legend>
+          <div class="opts" data-opts="type"></div>
+        </fieldset>
+        <fieldset class="q" data-q="where" hidden>
+          <legend>Where is the site?</legend>
+          <div class="opts" data-opts="island"></div>
+          <label class="field">District or area <span class="opt">(optional)</span><input name="area" autocomplete="off" placeholder="For example Anse Royale, Baie Ste Anne"></label>
+        </fieldset>
+        <fieldset class="q" data-q="stage" hidden>
+          <legend>Where are you up to?</legend>
+          <div class="opts" data-opts="stage"></div>
+        </fieldset>
+        <fieldset class="q" data-q="budget" hidden>
+          <legend>Roughly what's the budget?</legend>
+          <div class="opts" data-opts="budget"></div>
+        </fieldset>
+        <fieldset class="q" data-q="you" hidden>
+          <legend>How can we reach you?</legend>
+          <label class="field">Your name<input name="name" autocomplete="name" required></label>
+          <label class="field">Phone<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+          <label class="field">Email <span class="opt">(optional)</span><input name="email" type="email" autocomplete="email"></label>
+          <label class="field">Anything else we should know? <span class="opt">(optional)</span><textarea name="note" rows="3" placeholder="Size, number of rooms, timing, your architect…"></textarea></label>
+          <p class="err" data-err role="alert" hidden></p>
+          <div class="send">
+            <button type="button" class="btn" data-send="email">Send by email</button>
+            <button type="button" class="btn line" data-send="wa">Send on WhatsApp</button>
+          </div>
+          <p class="small">Email opens your mail app with the brief filled in, addressed to our team. WhatsApp opens a chat with the same message.</p>
+        </fieldset>
+        <div class="nav">
+          <button type="button" class="btn line" data-back>Back</button>
+          <button type="button" class="btn" data-next>Next</button>
+        </div>
+      </form>
+    </div>
+
+    <aside class="brief" aria-label="Your project brief">
+      <div class="brief-head"><span>Project brief</span><span data-brief-date></span></div>
+      <dl data-brief></dl>
+      <div class="brief-foot"><span>To: Mahé Design &amp; Build</span><span>Sheet 01 of 01</span></div>
+    </aside>
+  </div>
+</main>
+
+<footer class="foot" data-foot></footer>
+<div class="menu" id="menu" hidden data-menu></div>
+<script type="module" src="assets/start.js"></script>
+</body>
+</html>
